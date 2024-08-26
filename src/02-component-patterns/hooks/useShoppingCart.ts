@@ -18,31 +18,12 @@ export const useShoppingCart = () => {
     product: Product
   }) => {
     setShoppingCart((state) => {
-      // Forma controlada
-      const productInCart: ProductInCart = state[product.id] || {
-        ...product,
-        count: 0
+      const newState = {
+        ...state,
+        [product.id]: { ...product, count }
       }
-
-      if (Math.max(productInCart.count + count, 0) > 0) {
-        productInCart.count += count
-        return {
-          ...state,
-          [product.id]: productInCart
-        }
-      }
-      // Borrar el producto
-      const { [product.id]: toDelete, ...rest } = state
-      return rest
-
-      // FORMA SENCILLA
-      // const newState = {
-      //   ...state,
-      //   [product.id]: { ...product, count }
-      // }
-      // if (count === 0) delete newState[product.id]
-
-      // return newState
+      if (count === 0) delete newState[product.id]
+      return newState
     })
   }
   return {
