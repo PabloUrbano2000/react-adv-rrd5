@@ -1,5 +1,5 @@
 import { useFormik } from 'formik'
-import Yup from 'yup'
+import * as Yup from 'yup'
 import '../styles/styles.css'
 
 export const FormikYupPage = () => {

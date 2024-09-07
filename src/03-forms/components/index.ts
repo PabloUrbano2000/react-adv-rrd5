@@ -1,3 +1,3 @@
-export * from './MyCheckBox'
-export * from './MySelect'
-export * from './MyTextInput'
+export { MyCheckbox } from './MyCheckbox'
+export { MySelect } from './MySelect'
+export { MyTextInput } from './MyTextInput'

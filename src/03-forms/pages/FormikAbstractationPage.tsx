@@ -1,5 +1,5 @@
 import { Form, Formik } from 'formik'
-import Yup from 'yup'
+import * as Yup from 'yup'
 import { MyCheckbox, MySelect, MyTextInput } from '../components'
 import '../styles/styles.css'
 
