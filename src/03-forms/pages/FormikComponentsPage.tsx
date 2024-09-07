@@ -1,5 +1,5 @@
 import { ErrorMessage, Field, Form, Formik } from 'formik'
-import Yup from 'yup'
+import * as Yup from 'yup'
 import '../styles/styles.css'
 
 export const FormikComponentsPage = () => {
