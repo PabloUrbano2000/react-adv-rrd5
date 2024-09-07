@@ -5,6 +5,13 @@ import {
   Switch
 } from 'react-router-dom'
 
+import {
+  FormikAbstractationPage,
+  FormikBasicPage,
+  FormikComponentsPage,
+  FormikYupPage,
+  RegisterPage
+} from '../03-forms/pages'
 import logo from '../logo.svg'
 
 export const Navigation = () => {
@@ -20,13 +27,31 @@ export const Navigation = () => {
               </NavLink>
             </li>
             <li>
-              <NavLink to='/about' activeClassName='nav-active' exact>
-                About
+              <NavLink to='/formik-basic' activeClassName='nav-active' exact>
+                Formik Basic
               </NavLink>
             </li>
             <li>
-              <NavLink to='/users' activeClassName='nav-active' exact>
-                Users
+              <NavLink to='/formik-yup' activeClassName='nav-active' exact>
+                Formik Yup
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to='/formik-components'
+                activeClassName='nav-active'
+                exact
+              >
+                Formik Components
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to='/formik-abstratation'
+                activeClassName='nav-active'
+                exact
+              >
+                Formik Abstractation
               </NavLink>
             </li>
           </ul>
@@ -36,10 +61,19 @@ export const Navigation = () => {
             renders the first one that matches the current URL. */}
         <Switch>
           <Route path='/register'>
-            <h1>Register Page</h1>
+            <RegisterPage />
           </Route>
-          <Route path='/users'>
-            <h1>Users</h1>
+          <Route path='/formik-basic'>
+            <FormikBasicPage />
+          </Route>
+          <Route path='/formik-yup'>
+            <FormikYupPage />
+          </Route>
+          <Route path='/formik-components'>
+            <FormikComponentsPage />
+          </Route>
+          <Route path='/formik-abstractation'>
+            <FormikAbstractationPage />
           </Route>
           <Route path='/'>
             <h1>Home</h1>
